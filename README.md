@@ -35,7 +35,8 @@ A csv file containing the count of residential properties in each block group wi
 
 **Steps Taken:**
 
-**Part A–**
+**Part A–
+**
 
 •	“Remediation_Buffer.py”  - reads in the remediation sites and the block groups. Builds a 1000-meter buffer around the remediation sites to be used in QGIS. Also dissolves the boundaries so instead of numerous overlapping boundaries, we just have one boundary around all of the overlapping buffers for the sites.
 
@@ -49,7 +50,8 @@ A csv file containing the count of residential properties in each block group wi
 
 •	The outputs for this script are “onondaga_remed_rings.gpkg” which holds the rings around the remediation site, “near_parcels_remed.gpkg” which holds the parcel and ring overlay, and “near_parcels_remediation.csv” dataframe that has each tax parcel with how far they are from the sites.
 
-**Part B – **
+**Part B – 
+**
 
 •	“Onondaga_bg_demo.py”, “Onondaga_bg_econ.py”, “Onondaga_bg_educ.py” –  these take census data by means of an API call, to make dataframes used in the next three scripts. The first script takes demographic data of the block groups, the second takes median earnings of the block groups, and the third takes education attainment for those over 25 in the block groups.
 
@@ -57,7 +59,8 @@ A csv file containing the count of residential properties in each block group wi
 
 •	The outputs are three dataframes; “Onondaga_bg_demo.csv”, “Onondaga_bg_educ.csv”, and “Onondaga_bg_econ.csv”. Also, three layers added to the “near_parcels_remed.gpkg”; demo_bg, econ_bg, and educ_bg which can be used to make maps based on those three characterisitcs.
 
-**Part C – **
+**Part C – 
+**
 
 •	“near_remed_demo.py”, “near_remed_educ.py”, and “near_remediation_TAV.py” – The first script creates graphs that looks at the probability of pulling a person of color or a white person at each radius level, and the odds ratio for a person of color living at each radius compared to a white person. The second script creates two graphs that looks at the probability of pulling a person of no college attainment or a person with college attainment at each radius level, and the odds ratio for a person of no college education living at each radius compared to a college educated person. The third script creates a graphic which shows the average total assessed value at each radius level.
 
@@ -65,7 +68,8 @@ A csv file containing the count of residential properties in each block group wi
 
 •	The outputs for the first script are the two bar graphs described above: “probs_by_race_remed.png” and “odds_ratio_remed.png”. The second script has the output files: “educ_ratio_remed.png” and “prob_by_educ_remed.png”. The third script has one output file: “avg_tav_radius.png”.
 
-**Part D – **
+**Part D – 
+**
 •	“Onondaga_remed.qgz” – after uploading the layers created throughout the project, one can build several maps which give an overview of the block groups within Onondaga County.
 
 •	The inputs are the “near_parcels_remed.gpkg” and the “Onondaga_remed_rings.gpkg” files
