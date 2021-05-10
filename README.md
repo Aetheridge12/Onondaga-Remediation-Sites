@@ -78,13 +78,21 @@ A csv file containing the count of residential properties in each block group wi
 •	The outputs are four maps (three density, and one that shows the tax parcels by total assessed value). More can be created based off of the available data aggregated during this project.
 
 •	Steps: 
+
 o	Add the “block_group” and “remediation” layers of the “Onondaga_remediation.gpkg”
+
 o	Duplicate the block group layer and set the fill pattern to stipes (this will be used later because some of the median earnings data is missing)
+
 o	Add the rings layer from the “Onondaga_remed_ring.gpkg” file.
+
 o	Add the “demo_bg”, “educ_bg”, and “earnings_bg” layers. 
+
 o	To create the density maps for each, use natural breaks.
+
 o	Add the tax parcels  in by pulling the parcels layer of the “near_parcel_remed.gpkg” file
+
 o	Filter down to residential parcels which are those from 200 to 299.
+
 o	Create a natural breaks map using the “TOTAL_AV” variable. 
 
 
