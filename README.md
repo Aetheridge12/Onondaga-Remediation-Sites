@@ -37,6 +37,7 @@ A csv file containing the count of residential properties in each block group wi
 
 **Part A-
 **
+
 •	“Remediation_Buffer.py”  - reads in the remediation sites and the block groups. Builds a 1000-meter buffer around the remediation sites to be used in QGIS. Also dissolves the boundaries so instead of numerous overlapping boundaries, we just have one boundary around all of the overlapping buffers for the sites.
 
 •	The inputs for the “Remediation_Buffer.py” script are the “Remediation_site_borders.shp” file which is taken from the NY State Department of Environmental Conservation, and the block group file from the census. 
@@ -51,6 +52,7 @@ A csv file containing the count of residential properties in each block group wi
 
 **Part B –
 **
+
 •	“Onondaga_bg_demo.py”, “Onondaga_bg_econ.py”, “Onondaga_bg_educ.py” –  these take census data by means of an API call, to make dataframes used in the next three scripts. The first script takes demographic data of the block groups, the second takes median earnings of the block groups, and the third takes education attainment for those over 25 in the block groups.
 
 •	The inputs for these scripts are the data from the census pulled by an API call and the block group file also from the census.
@@ -59,6 +61,7 @@ A csv file containing the count of residential properties in each block group wi
 
 **Part C –
 **
+
 •	“near_remed_demo.py”, “near_remed_educ.py”, and “near_remediation_TAV.py” – The first script creates graphs that looks at the probability of pulling a person of color or a white person at each radius level, and the odds ratio for a person of color living at each radius compared to a white person. The second script creates two graphs that looks at the probability of pulling a person of no college attainment or a person with college attainment at each radius level, and the odds ratio for a person of no college education living at each radius compared to a college educated person. The third script creates a graphic which shows the average total assessed value at each radius level.
 
 •	The input files for the first two are their respective csv files which were created in PART B, “Onondaga_bg_demo.csv”, “Onondaga_bg_educ.csv”, the parcels layer of the “near_parcels_remed.gpkg”, the block group file from the census, and the “class_200_by_bg.csv” file (Ask for permission).
@@ -67,6 +70,7 @@ A csv file containing the count of residential properties in each block group wi
 
 **Part D –
 **
+
 •	“Onondaga_remed.qgz” – after uploading the layers created throughout the project, one can build several maps which give an overview of the block groups within Onondaga County.
 
 •	The inputs are the “near_parcels_remed.gpkg” and the “Onondaga_remed_rings.gpkg” files
